@@ -15,6 +15,7 @@
 		C0498B12248AEB300008C91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0498B10248AEB300008C91B /* Main.storyboard */; };
 		C0498B14248AEB320008C91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0498B13248AEB320008C91B /* Assets.xcassets */; };
 		C0498B17248AEB320008C91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0498B15248AEB320008C91B /* LaunchScreen.storyboard */; };
+		C0498B1F248AEBBE0008C91B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = C0498B1E248AEBBE0008C91B /* Sounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C0498B13248AEB320008C91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0498B16248AEB320008C91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0498B18248AEB320008C91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0498B1E248AEBBE0008C91B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				C0498B0C248AEB300008C91B /* GameScene.swift */,
 				C0498B0E248AEB300008C91B /* GameViewController.swift */,
 				C0498B10248AEB300008C91B /* Main.storyboard */,
+				C0498B1E248AEBBE0008C91B /* Sounds */,
 				C0498B13248AEB320008C91B /* Assets.xcassets */,
 				C0498B15248AEB320008C91B /* LaunchScreen.storyboard */,
 				C0498B18248AEB320008C91B /* Info.plist */,
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0498B1F248AEBBE0008C91B /* Sounds in Resources */,
 				C0498B12248AEB300008C91B /* Main.storyboard in Resources */,
 				C0498B09248AEB300008C91B /* GameScene.sks in Resources */,
 				C0498B14248AEB320008C91B /* Assets.xcassets in Resources */,
