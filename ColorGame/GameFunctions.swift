@@ -64,4 +64,13 @@ extension GameScene {
             }
         }
     }
+    
+    func movePlayerToStart() {
+        if let player = self.player {
+            player.removeFromParent()
+            self.player = nil
+            self.createPlayer()
+            self.currentTrack = 0
+        }
+    }
 }
