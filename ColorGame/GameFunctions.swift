@@ -73,4 +73,14 @@ extension GameScene {
             self.currentTrack = 0
         }
     }
+    
+    func nextLevel(playerPhysicsBody:SKPhysicsBody) {
+        let emitter = SKEmitterNode(fileNamed: "fireworks")
+        playerPhysicsBody.node?.addChild(emitter!)
+        
+        self.run(SKAction.wait(forDuration: 0.5)){
+            emitter?.removeFromParent()
+            self.movePlayerToStart()
+        }
+    }
 }

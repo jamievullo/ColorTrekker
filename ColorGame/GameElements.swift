@@ -48,6 +48,7 @@ extension GameScene {
     func createTarget() {
         target = self.childNode(withName: "target") as? SKSpriteNode
         target?.physicsBody = SKPhysicsBody(circleOfRadius: target!.size.width / 2)
+        target?.physicsBody?.categoryBitMask = targetCategory
         target?.physicsBody?.collisionBitMask = 0
     }
     
