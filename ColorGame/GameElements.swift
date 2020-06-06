@@ -17,6 +17,15 @@ enum Enemies:Int {
 
 extension GameScene {
     
+    func createHUD () {
+        timeLabel = self.childNode(withName: "time") as? SKLabelNode
+        scoreLabel = self.childNode(withName: "score") as? SKLabelNode
+        
+        remainingTime = 60
+        currentScore = 0
+        
+    }
+    
     func setupTracks(){
         for i in 0 ... 8 {
             if let track = self.childNode(withName: "\(i)") as? SKSpriteNode {
