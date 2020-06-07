@@ -40,7 +40,7 @@ extension GameScene {
            player?.physicsBody?.linearDamping = 0
            player?.physicsBody?.categoryBitMask = playerCategory
            player?.physicsBody?.collisionBitMask = 0
-           player?.physicsBody?.contactTestBitMask = enemyCategory | targetCategory
+           player?.physicsBody?.contactTestBitMask = enemyCategory | targetCategory | powerUpCategory
            
            guard let playerPosition = tracksArray?.first?.position.x else {return}
            player?.position = CGPoint(x: playerPosition, y: self.size.height / 2)
@@ -92,13 +92,14 @@ extension GameScene {
        }
     
     func createPowerUp(forTrack track:Int) -> SKSpriteNode? {
-        let powerUpSprite = SKSpriteNode(imageNamed: "PowerUp")
+        let powerUpSprite = SKSpriteNode(imageNamed: "powerUp")
         
         powerUpSprite.name = "ENEMY"
         
         powerUpSprite.physicsBody = SKPhysicsBody(circleOfRadius: powerUpSprite.size.width / 2)
         powerUpSprite.physicsBody?.linearDamping = 0
         powerUpSprite.physicsBody?.categoryBitMask = powerUpCategory
+        powerUpSprite.physicsBody?.collisionBitMask = 0
         
         
         let up = directionArray[track]
