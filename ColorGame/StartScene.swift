@@ -1,11 +1,3 @@
-//
-//  StartScene.swift
-//  ACGame
-//
-//  Created by Brian Advent on 30.05.17.
-//  Copyright © 2017 Brian Advent. All rights reserved.
-//
-
 import SpriteKit
 
 class StartScene: SKScene {
@@ -14,9 +6,16 @@ class StartScene: SKScene {
     var gameScene:SKScene!
     var backgroundMusic: SKAudioNode!
     
+    var scrollingBG:ScrollingBackground?
+    
     override func didMove(to view: SKView) {
         playButton = self.childNode(withName: "startButton") as? SKSpriteNode
         
+        scrollingBG = ScrollingBackground.scrollingNodeWidthImage(imageName: "loopBG", containerWidth: self.size.width)
+        scrollingBG?.scrollingSpeed = 1.5
+        scrollingBG?.anchorPoint = .zero
+        
+        self.addChild(scrollingBG!)
         
         if let musicURL = Bundle.main.url(forResource: "MenuHighscoreMusic", withExtension: "mp3") {
             backgroundMusic = SKAudioNode(url: musicURL)
@@ -39,6 +38,12 @@ class StartScene: SKScene {
                 self.view?.presentScene(gameScene, transition: transition)
                 
             }
+        }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        if let scrollBG = self.scrollingBG {
+            scrollBG.update(currentTime: currentTime)
         }
     }
 }
