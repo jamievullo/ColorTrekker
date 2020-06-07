@@ -70,13 +70,13 @@ extension GameScene {
            switch type {
            case .small:
                enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 70), cornerWidth: 8, cornerHeight: 8, transform: nil)
-               enemySprite.fillColor = UIColor(red: 0.4431, green: 0.5529, blue: 0.7451, alpha: 1)
+               enemySprite.fillColor = UIColor(red: 0.13, green: 0.91, blue: 0.18, alpha: 1.00)
            case .medium:
                enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 100), cornerWidth: 8, cornerHeight: 8, transform: nil)
-               enemySprite.fillColor = UIColor(red: 0.7804, green: 0.4039, blue: 0.4039, alpha: 1)
+               enemySprite.fillColor = UIColor(red: 1.00, green: 0.27, blue: 0.39, alpha: 1.00)
            case .large:
                enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 130), cornerWidth: 8, cornerHeight: 8, transform: nil)
-               enemySprite.fillColor = UIColor(red: 0.7804, green: 0.6392, blue: 0.4039, alpha: 1)
+               enemySprite.fillColor = UIColor(red: 1.00, green: 0.78, blue: 0.00, alpha: 1.00)
            }
            guard let enemyPosition = tracksArray?[track].position else {return nil}
            
