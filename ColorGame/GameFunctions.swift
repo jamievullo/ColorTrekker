@@ -112,6 +112,7 @@ extension GameScene {
     }
     
     func gameOver() {
+        GameHandler.sharedInstance.saveGameStats()
         
         self.run(SKAction.playSoundFileNamed("levelCompleted", waitForCompletion: true))
         

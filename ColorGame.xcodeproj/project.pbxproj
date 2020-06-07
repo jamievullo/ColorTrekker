@@ -31,6 +31,7 @@
 		C0498B40248D479D0008C91B /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0498B3C248D479D0008C91B /* StartScene.sks */; };
 		C0498B41248D479D0008C91B /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0498B3D248D479D0008C91B /* GameOverScene.sks */; };
 		C0498B43248D4B5E0008C91B /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0498B42248D4B5E0008C91B /* ScrollingBackground.swift */; };
+		C0498B45248D57A40008C91B /* GameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0498B44248D57A40008C91B /* GameHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		C0498B3C248D479D0008C91B /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		C0498B3D248D479D0008C91B /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 		C0498B42248D4B5E0008C91B /* ScrollingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingBackground.swift; sourceTree = "<group>"; };
+		C0498B44248D57A40008C91B /* GameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				C0498B26248C33F90008C91B /* GameElements.swift */,
 				C0498B28248C34080008C91B /* GameFunctions.swift */,
 				C0498B42248D4B5E0008C91B /* ScrollingBackground.swift */,
+				C0498B44248D57A40008C91B /* GameHandler.swift */,
 				C0498B10248AEB300008C91B /* Main.storyboard */,
 				C0498B13248AEB320008C91B /* Assets.xcassets */,
 				C0498B2B248D3CB00008C91B /* Sounds */,
@@ -234,6 +237,7 @@
 				C0498B3F248D479D0008C91B /* StartScene.swift in Sources */,
 				C0498B27248C33F90008C91B /* GameElements.swift in Sources */,
 				C0498B0D248AEB300008C91B /* GameScene.swift in Sources */,
+				C0498B45248D57A40008C91B /* GameHandler.swift in Sources */,
 				C0498B0F248AEB300008C91B /* GameViewController.swift in Sources */,
 				C0498B3E248D479D0008C91B /* GameOverScene.swift in Sources */,
 				C0498B07248AEB300008C91B /* AppDelegate.swift in Sources */,

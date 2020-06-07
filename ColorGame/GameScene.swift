@@ -20,6 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var currentScore:Int = 0 {
         didSet {
             self.scoreLabel?.text = "SCORE: \(self.currentScore)"
+            GameHandler.sharedInstance.score = currentScore
         }
     }
     
