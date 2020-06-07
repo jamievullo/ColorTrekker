@@ -42,6 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let playerCategory:UInt32 = 0x1 << 0
     let enemyCategory:UInt32 = 0x1 << 1
     let targetCategory:UInt32 = 0x1 << 2
+    let powerUpCategory:UInt32 = 0x1 << 3
         
     override func didMove(to view: SKView) {
         setupTracks()

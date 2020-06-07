@@ -91,4 +91,27 @@ extension GameScene {
            return enemySprite
        }
     
+    func createPowerUp(forTrack track:Int) -> SKSpriteNode? {
+        let powerUpSprite = SKSpriteNode(imageNamed: "PowerUp")
+        
+        powerUpSprite.name = "ENEMY"
+        
+        powerUpSprite.physicsBody = SKPhysicsBody(circleOfRadius: powerUpSprite.size.width / 2)
+        powerUpSprite.physicsBody?.linearDamping = 0
+        powerUpSprite.physicsBody?.categoryBitMask = powerUpCategory
+        
+        
+        let up = directionArray[track]
+        guard let powerUpXPosition = tracksArray?[track].position.x else {return nil}
+        
+        powerUpSprite.position.x = powerUpXPosition
+        powerUpSprite.position.y = up ? -130 : self.size.height + 130
+        
+        powerUpSprite.physicsBody?.velocity = up ? CGVector(dx: 0, dy: velocityArray[track]) : CGVector(dx: 0, dy: -velocityArray[track])
+        
+        return powerUpSprite
+        
+        
+    }
+    
 }
