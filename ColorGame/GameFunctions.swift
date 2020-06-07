@@ -14,12 +14,12 @@ extension GameScene {
     func launchGameTimer() {
         let timeAction = SKAction.repeatForever(SKAction.sequence([SKAction.run({
             self.remainingTime -= 1
-        }),SKAction.wait(forDuration: 1)]))
+        }), SKAction.wait(forDuration: 1)]))
         
         timeLabel?.run(timeAction)
     }
     
-    func moveVertically (up:Bool) {
+    func moveVertically (up: Bool) {
         if up {
             let moveAction = SKAction.moveBy(x: 0, y: 3, duration: 0.01)
             let repeatAction = SKAction.repeatForever(moveAction)
@@ -53,7 +53,7 @@ extension GameScene {
                 }
             })
             currentTrack += 1
-//            print("sound")
+            
             self.run(moveSound)
         }
     }
@@ -77,6 +77,7 @@ extension GameScene {
         if let player = self.player {
             player.removeFromParent()
             self.player = nil
+            
             self.createPlayer()
             self.currentTrack = 0
         }

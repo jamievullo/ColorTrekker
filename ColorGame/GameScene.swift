@@ -11,13 +11,16 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    var tracksArray:[SKSpriteNode]? = [SKSpriteNode]()
+    var tracksArray: [SKSpriteNode]? = [SKSpriteNode]()
     var player:SKSpriteNode?
     var target:SKSpriteNode?
     
+    var timeLabel:SKLabelNode?
+    var scoreLabel:SKLabelNode?
+    
     var currentScore:Int = 0 {
         didSet {
-            self.scoreLabel?.text = "SCORE \(self.currentScore)"
+            self.scoreLabel?.text = "SCORE: \(self.currentScore)"
         }
     }
     
@@ -27,14 +30,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    var timeLabel:SKLabelNode?
-    var scoreLabel:SKLabelNode?
-    
     var currentTrack = 0
     var movingToTrack = false
     
     let moveSound = SKAction.playSoundFileNamed("move.wav", waitForCompletion: false)
-    var backgroudNoise:SKAudioNode!
+    var backgroudNoise: SKAudioNode!
     
     let trackVelocities = [180, 200, 250]
     var directionArray = [Bool]()
@@ -78,6 +78,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let touch = touches.first {
             let location = touch.previousLocation(in: self)
             let node = self.nodes(at: location).first
+            
             if node?.name == "right" || node?.name == "rightimg" {
                 moveToNextTrack()
 //                print("move right")
@@ -102,8 +103,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        var playerBody:SKPhysicsBody
-        var otherBody:SKPhysicsBody
+        var playerBody: SKPhysicsBody
+        var otherBody: SKPhysicsBody
         
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             playerBody = contact.bodyA
