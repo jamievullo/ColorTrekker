@@ -15,6 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player:SKSpriteNode?
     var target:SKSpriteNode?
     
+    var pause:SKSpriteNode?
     var timeLabel:SKLabelNode?
     var scoreLabel:SKLabelNode?
     var currentScore:Int = 0 {
@@ -79,14 +80,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let node = self.nodes(at: location).first
             
             if node?.name == "right" || node?.name == "rightimg" {
-//                print("MOVE RIGHT")
-                moveToNextTrack()
+                if currentTrack < 8 {
+                    moveToNextTrack()
+                }
             } else if node?.name == "up" || node?.name == "upimg" {
-//                print("MOVE UP")
                 moveVertically(up: true)
             } else if node?.name == "down" || node?.name == "downimg" {
-//                print("MOVE DOWN")
                 moveVertically(up: false)
+            } else if node?.name == "pause", let scene = self.scene {
+                if scene.isPaused {
+                    scene.isPaused = false
+                } else {
+                    scene.isPaused = true
+                }
             }
         }
     }
