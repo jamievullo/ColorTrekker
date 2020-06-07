@@ -26,6 +26,10 @@
 		C0498B37248D3CB10008C91B /* levelCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B30248D3CB00008C91B /* levelCompleted.wav */; };
 		C0498B38248D3CB10008C91B /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B31248D3CB00008C91B /* fail.wav */; };
 		C0498B39248D3CB10008C91B /* levelUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B32248D3CB00008C91B /* levelUp.wav */; };
+		C0498B3E248D479D0008C91B /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0498B3A248D479D0008C91B /* GameOverScene.swift */; };
+		C0498B3F248D479D0008C91B /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0498B3B248D479D0008C91B /* StartScene.swift */; };
+		C0498B40248D479D0008C91B /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0498B3C248D479D0008C91B /* StartScene.sks */; };
+		C0498B41248D479D0008C91B /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0498B3D248D479D0008C91B /* GameOverScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		C0498B30248D3CB00008C91B /* levelCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelCompleted.wav; sourceTree = "<group>"; };
 		C0498B31248D3CB00008C91B /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
 		C0498B32248D3CB00008C91B /* levelUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelUp.wav; sourceTree = "<group>"; };
+		C0498B3A248D479D0008C91B /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		C0498B3B248D479D0008C91B /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		C0498B3C248D479D0008C91B /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		C0498B3D248D479D0008C91B /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 				C0498B0A248AEB300008C91B /* Actions.sks */,
 				C0498B24248C32440008C91B /* Game Scenes */,
 				C0498B25248C32690008C91B /* Particles */,
+				C0498B3B248D479D0008C91B /* StartScene.swift */,
+				C0498B3A248D479D0008C91B /* GameOverScene.swift */,
 				C0498B0C248AEB300008C91B /* GameScene.swift */,
 				C0498B26248C33F90008C91B /* GameElements.swift */,
 				C0498B28248C34080008C91B /* GameFunctions.swift */,
@@ -102,7 +112,9 @@
 		C0498B24248C32440008C91B /* Game Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C0498B3C248D479D0008C91B /* StartScene.sks */,
 				C0498B08248AEB300008C91B /* GameScene.sks */,
+				C0498B3D248D479D0008C91B /* GameOverScene.sks */,
 			);
 			path = "Game Scenes";
 			sourceTree = "<group>";
@@ -191,6 +203,8 @@
 				C0498B23248C07680008C91B /* fireworks.sks in Resources */,
 				C0498B35248D3CB10008C91B /* MenuHighscoreMusic.mp3 in Resources */,
 				C0498B38248D3CB10008C91B /* fail.wav in Resources */,
+				C0498B40248D479D0008C91B /* StartScene.sks in Resources */,
+				C0498B41248D479D0008C91B /* GameOverScene.sks in Resources */,
 				C0498B36248D3CB10008C91B /* background.wav in Resources */,
 				C0498B39248D3CB10008C91B /* levelUp.wav in Resources */,
 				C0498B21248C06E70008C91B /* pulse.sks in Resources */,
@@ -213,9 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0498B29248C34080008C91B /* GameFunctions.swift in Sources */,
+				C0498B3F248D479D0008C91B /* StartScene.swift in Sources */,
 				C0498B27248C33F90008C91B /* GameElements.swift in Sources */,
 				C0498B0D248AEB300008C91B /* GameScene.swift in Sources */,
 				C0498B0F248AEB300008C91B /* GameViewController.swift in Sources */,
+				C0498B3E248D479D0008C91B /* GameOverScene.swift in Sources */,
 				C0498B07248AEB300008C91B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
