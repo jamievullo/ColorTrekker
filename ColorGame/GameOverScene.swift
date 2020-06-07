@@ -1,11 +1,3 @@
-//
-//  GameOverScene.swift
-//  ACGame
-//
-//  Created by Brian Advent on 16.06.17.
-//  Copyright © 2017 Brian Advent. All rights reserved.
-//
-
 import SpriteKit
 
 class GameOverScene : SKScene {
