@@ -15,11 +15,17 @@
 		C0498B12248AEB300008C91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0498B10248AEB300008C91B /* Main.storyboard */; };
 		C0498B14248AEB320008C91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0498B13248AEB320008C91B /* Assets.xcassets */; };
 		C0498B17248AEB320008C91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0498B15248AEB320008C91B /* LaunchScreen.storyboard */; };
-		C0498B1F248AEBBE0008C91B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = C0498B1E248AEBBE0008C91B /* Sounds */; };
 		C0498B21248C06E70008C91B /* pulse.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0498B20248C06E70008C91B /* pulse.sks */; };
 		C0498B23248C07680008C91B /* fireworks.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0498B22248C07680008C91B /* fireworks.sks */; };
 		C0498B27248C33F90008C91B /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0498B26248C33F90008C91B /* GameElements.swift */; };
 		C0498B29248C34080008C91B /* GameFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0498B28248C34080008C91B /* GameFunctions.swift */; };
+		C0498B33248D3CB10008C91B /* powerUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B2C248D3CB00008C91B /* powerUp.wav */; };
+		C0498B34248D3CB10008C91B /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B2D248D3CB00008C91B /* move.wav */; };
+		C0498B35248D3CB10008C91B /* MenuHighscoreMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0498B2E248D3CB00008C91B /* MenuHighscoreMusic.mp3 */; };
+		C0498B36248D3CB10008C91B /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B2F248D3CB00008C91B /* background.wav */; };
+		C0498B37248D3CB10008C91B /* levelCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B30248D3CB00008C91B /* levelCompleted.wav */; };
+		C0498B38248D3CB10008C91B /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B31248D3CB00008C91B /* fail.wav */; };
+		C0498B39248D3CB10008C91B /* levelUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0498B32248D3CB00008C91B /* levelUp.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +39,17 @@
 		C0498B13248AEB320008C91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0498B16248AEB320008C91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0498B18248AEB320008C91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0498B1E248AEBBE0008C91B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		C0498B20248C06E70008C91B /* pulse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = pulse.sks; sourceTree = "<group>"; };
 		C0498B22248C07680008C91B /* fireworks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fireworks.sks; sourceTree = "<group>"; };
 		C0498B26248C33F90008C91B /* GameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
 		C0498B28248C34080008C91B /* GameFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFunctions.swift; sourceTree = "<group>"; };
+		C0498B2C248D3CB00008C91B /* powerUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerUp.wav; sourceTree = "<group>"; };
+		C0498B2D248D3CB00008C91B /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
+		C0498B2E248D3CB00008C91B /* MenuHighscoreMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MenuHighscoreMusic.mp3; sourceTree = "<group>"; };
+		C0498B2F248D3CB00008C91B /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
+		C0498B30248D3CB00008C91B /* levelCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelCompleted.wav; sourceTree = "<group>"; };
+		C0498B31248D3CB00008C91B /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
+		C0498B32248D3CB00008C91B /* levelUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelUp.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +91,8 @@
 				C0498B26248C33F90008C91B /* GameElements.swift */,
 				C0498B28248C34080008C91B /* GameFunctions.swift */,
 				C0498B10248AEB300008C91B /* Main.storyboard */,
-				C0498B1E248AEBBE0008C91B /* Sounds */,
 				C0498B13248AEB320008C91B /* Assets.xcassets */,
+				C0498B2B248D3CB00008C91B /* Sounds */,
 				C0498B15248AEB320008C91B /* LaunchScreen.storyboard */,
 				C0498B18248AEB320008C91B /* Info.plist */,
 			);
@@ -102,6 +114,20 @@
 				C0498B20248C06E70008C91B /* pulse.sks */,
 			);
 			path = Particles;
+			sourceTree = "<group>";
+		};
+		C0498B2B248D3CB00008C91B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C0498B2C248D3CB00008C91B /* powerUp.wav */,
+				C0498B2D248D3CB00008C91B /* move.wav */,
+				C0498B2E248D3CB00008C91B /* MenuHighscoreMusic.mp3 */,
+				C0498B2F248D3CB00008C91B /* background.wav */,
+				C0498B30248D3CB00008C91B /* levelCompleted.wav */,
+				C0498B31248D3CB00008C91B /* fail.wav */,
+				C0498B32248D3CB00008C91B /* levelUp.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +189,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0498B23248C07680008C91B /* fireworks.sks in Resources */,
+				C0498B35248D3CB10008C91B /* MenuHighscoreMusic.mp3 in Resources */,
+				C0498B38248D3CB10008C91B /* fail.wav in Resources */,
+				C0498B36248D3CB10008C91B /* background.wav in Resources */,
+				C0498B39248D3CB10008C91B /* levelUp.wav in Resources */,
 				C0498B21248C06E70008C91B /* pulse.sks in Resources */,
-				C0498B1F248AEBBE0008C91B /* Sounds in Resources */,
+				C0498B33248D3CB10008C91B /* powerUp.wav in Resources */,
 				C0498B12248AEB300008C91B /* Main.storyboard in Resources */,
+				C0498B37248D3CB10008C91B /* levelCompleted.wav in Resources */,
+				C0498B34248D3CB10008C91B /* move.wav in Resources */,
 				C0498B09248AEB300008C91B /* GameScene.sks in Resources */,
 				C0498B14248AEB320008C91B /* Assets.xcassets in Resources */,
 				C0498B17248AEB320008C91B /* LaunchScreen.storyboard in Resources */,

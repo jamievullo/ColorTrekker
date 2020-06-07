@@ -17,7 +17,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var timeLabel:SKLabelNode?
     var scoreLabel:SKLabelNode?
-    
     var currentScore:Int = 0 {
         didSet {
             self.scoreLabel?.text = "SCORE: \(self.currentScore)"
@@ -34,7 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var movingToTrack = false
     
     let moveSound = SKAction.playSoundFileNamed("move.wav", waitForCompletion: false)
-    var backgroudNoise: SKAudioNode!
+    var backgroundNoise: SKAudioNode!
     
     let trackVelocities = [180, 200, 250]
     var directionArray = [Bool]()
@@ -43,26 +42,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let playerCategory:UInt32 = 0x1 << 0
     let enemyCategory:UInt32 = 0x1 << 1
     let targetCategory:UInt32 = 0x1 << 2
-    
-    
+        
     override func didMove(to view: SKView) {
         setupTracks()
-        
         createHUD()
         launchGameTimer()
-        
         createPlayer()
         createTarget()
         
         self.physicsWorld.contactDelegate = self
         
-        if let musicURL = Bundle.main.url(forResource: "background", withExtension: "wav"){
-            backgroudNoise = SKAudioNode(url: musicURL)
-            addChild(backgroudNoise)
+        if let musicURL = Bundle.main.url(forResource: "background", withExtension: "wav") {
+            backgroundNoise = SKAudioNode(url: musicURL)
+            addChild(backgroundNoise)
         }
         
         if let numberOfTracks = tracksArray?.count {
-            for _ in 0 ... numberOfTracks {
+            for _ in 0...numberOfTracks {
                 let randomNumberForVelocity = GKRandomSource.sharedRandom().nextInt(upperBound: 3)
                 velocityArray.append(trackVelocities[randomNumberForVelocity])
                 directionArray.append(GKRandomSource.sharedRandom().nextBool())
@@ -72,6 +68,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.run(SKAction.repeatForever(SKAction.sequence([SKAction.run {
             self.spawnEnemies()
             }, SKAction.wait(forDuration: 2)])))
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -80,24 +77,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let node = self.nodes(at: location).first
             
             if node?.name == "right" || node?.name == "rightimg" {
+//                print("MOVE RIGHT")
                 moveToNextTrack()
-//                print("move right")
             } else if node?.name == "up" || node?.name == "upimg" {
+//                print("MOVE UP")
                 moveVertically(up: true)
-//                print("move up")
             } else if node?.name == "down" || node?.name == "downimg" {
+//                print("MOVE DOWN")
                 moveVertically(up: false)
-//                print("move down")
             }
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if !movingToTrack {
-                player?.removeAllActions()
+            player?.removeAllActions()
         }
+        
     }
-
+    
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         player?.removeAllActions()
     }
@@ -116,24 +114,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == enemyCategory {
             self.run(SKAction.playSoundFileNamed("fail.wav", waitForCompletion: true))
-                movePlayerToStart()
-//            print("Enemy hit")
+            movePlayerToStart()
         } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == targetCategory {
-                nextLevel(playerPhysicsBody: playerBody)
-//            print("Target hit")
+
+            nextLevel(playerPhysicsBody: playerBody)
+            
         }
     }
     
     
-    
     override func update(_ currentTime: TimeInterval) {
+        
         if let player = self.player {
             if player.position.y > self.size.height || player.position.y < 0 {
                 movePlayerToStart()
             }
         }
+        
         if remainingTime <= 5 {
             timeLabel?.fontColor = UIColor.red
         }
+        
     }
 }
