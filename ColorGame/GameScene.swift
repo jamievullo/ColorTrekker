@@ -138,5 +138,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             timeLabel?.fontColor = UIColor.red
         }
         
+        if remainingTime == 0 {
+            gameOver()
+        }
+        
     }
 }
